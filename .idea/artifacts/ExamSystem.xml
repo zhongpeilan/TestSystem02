@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ExamSystem">
+    <output-path>$PROJECT_DIR$/out/artifacts/ExamSystem</output-path>
+    <root id="archive" name="ExamSystem.war">
+      <element id="artifact" artifact-name="TestSystem02:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

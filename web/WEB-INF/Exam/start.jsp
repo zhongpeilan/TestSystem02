@@ -16,6 +16,9 @@
     <form action="<%=path%>singleservlet?method=getsubjectList" method="post">
         <button type="submit">开始考试</button>
     </form>
+    <form action="<%=path%>gradeservlet?method=history" method="post">
+        <button type="submit">查看历史成绩</button>
+    </form>
 </center>
 
 </body>

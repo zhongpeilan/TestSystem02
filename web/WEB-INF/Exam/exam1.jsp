@@ -91,7 +91,7 @@
 							<div class="test_content_title">
 								<h2>单选题</h2>
 								<p>
-									<span>共</span><i class="content_lit"></i><span>${fn:length(singleList)}题，</span><span>合计</span><i
+									<span>共</span><i class="content_lit"></i><span>${fn:length(paperList)}题，</span><span>合计</span><i
 										class="content_fs">100</i><span>分</span><span>&nbsp;&nbsp;每题${score}分</span>
 								</p>
 							</div>
@@ -106,33 +106,33 @@
 										<div class="test_content_nr_main">
 											<ul>
 												<li class="option"><input type="radio"
-													class="radioOrCheck" name="answer${stat.index}"
-													id="q${stat.count }opt1" value="A"  /> <label
-													for="q${stat.count }opt1"> A.
+													class="radioOrCheck" name="${stat.index}"
+													id="${stat.count }opt1" value="A"  /> <label
+													for="${stat.count }opt1"> A.
 														<p class="ue" style="display: inline;">${question.option_A }</p>
 												</label></li>
 
 												<li class="option"><input type="radio"
-													class="radioOrCheck" name="answer${stat.index}"
+													class="radioOrCheck" name="${stat.index}"
 													id="q${stat.count }opt2" value="B"  /> <label
 													for="q${stat.count }opt2"> B.
 														<p class="ue" style="display: inline;">${question.option_B }</p>
 												</label></li>
 
 												<li class="option"><input type="radio"
-													class="radioOrCheck" name="answer${stat.index}"
+													class="radioOrCheck" name="${stat.index}"
 													id="q${stat.count }opt3" value="C"/> <label
 													for="q${stat.count }opt3"> C.
 														<p class="ue" style="display: inline;">${question.option_C }</p>
 												</label></li>
 
 												<li class="option"><input type="radio"
-													class="radioOrCheck" name="answer${stat.index}"
+													class="radioOrCheck" name="${stat.index}"
 													id="q${stat.count }opt4" value="D" /> <label
 													for="q${stat.count }opt4"> D.
 														<p class="ue" style="display: inline;">${question.option_D }</p>
 												</label></li>
-												<input name="answer${stat.index}" type="hidden" value="null">
+
 
 											</ul>
 										</div>

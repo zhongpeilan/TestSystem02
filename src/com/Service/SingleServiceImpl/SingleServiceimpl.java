@@ -13,7 +13,6 @@ public class SingleServiceimpl implements SingleService {
     public List<single> querySingle() {
         return singleDaoimpl.querySingle();
     }
-
     //获取单一科目试题的方法
     @Override
     public List<single> queryBypaper(String paper) {
@@ -24,7 +23,6 @@ public class SingleServiceimpl implements SingleService {
     public List<String> queryBySubject() {
         return singleDaoimpl.querBySubject();
     }
-
     @Override
     public List<String> queryAnswer(String paper) {
         return singleDaoimpl.queryAnswer(paper);

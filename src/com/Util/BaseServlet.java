@@ -15,6 +15,7 @@ public class BaseServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");
         //获取用户指定的方法
         String method=req.getParameter("method");
+        System.out.println(method);
         //获取当前servlet类
         Class servlet=this.getClass();
         Method method1;

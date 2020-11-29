@@ -1,6 +1,10 @@
 package com.Controller;
 
+import com.Entity.User;
+import com.Entity.grade;
 import com.Entity.single;
+import com.Service.GradeService;
+import com.Service.GradeServiceImpl.GradeServiceimpl;
 import com.Service.SingleService;
 import com.Service.SingleServiceImpl.SingleServiceimpl;
 import com.Util.BaseServlet;
@@ -20,6 +24,8 @@ public class SingleServlet extends BaseServlet{
     //创建SingleService的对象，为了使用他的服务（方法）
     //多态特性，目的为了编码稳定
     SingleService service=new SingleServiceimpl();
+    //创建GradeService对象，使用他的服务(方法)
+    GradeService gradeService=new GradeServiceimpl();
     //试卷获取与批改
     public String checkTest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         /*1.获取用户传递的数据（试题）
@@ -56,6 +62,14 @@ public class SingleServlet extends BaseServlet{
         }
         //分数
         int fraction= count*(100/answerList.size());
+        //取出session中存入的user信息
+         User user =(User)request.getSession().getAttribute("User");
+         grade  g=new grade();
+         g.setUser_id(user.getUser_id());
+         g.setPaper(paper);
+         g.setScore(fraction);
+        //调用gradeService服务，以方便完成我们的成绩录入
+         gradeService.insertGrade(g);
         //分数，用户答案，正确答案 传递给jsp
         request.setAttribute("fraction",fraction);
         request.setAttribute("userAnswerList",userAnswerList);

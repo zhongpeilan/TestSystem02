@@ -46,15 +46,16 @@
 			</div>
 			<form action="<%=path%>userServlet" method="get">
 				<input type="hidden" name="method" value="login">
-				<li><input name="username" type="text" class="text"
-					value="Username" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'Username';}"><a
+				<li><input name="username" type="text" class="text" placeholder="Username"><a
 					href="#" class=" icon user"></a></li>
 				<div class="clear"></div>
-				<li><input name="password" type="password" value="Password"
-					onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'Password';}">
+				<li><input name="password" placeholder="Password" type="password">
 					<a href="#" class="icon lock"></a></li>
+                <%--<li style="height: 24px">
+                    <span>
+                        ${Msg}
+                    </span>
+                </li>--%>
 				<div class="clear"></div>
 				<div class="submit">
 					<input type="submit" value="Sign in">
@@ -62,7 +63,7 @@
 						<a href="#">忘记密码 ?</a>
 					</h4>
 					<h4>
-						<a href="<%=path%>register.jsp">注册 ?</a>
+						<a href="<%=path%>userServlet?method=studentRegister">注册 ?</a>
 					</h4>
 					<br>
 					<br> <span style="color: red; font-size: 10px">${login_msg}</span>
